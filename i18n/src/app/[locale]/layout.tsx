@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
-import { LayoutProps } from '../../../.next/types/app/[locale]/page';
 
 // Can be imported from a shared config
 const locales = ["en", "sk"];
@@ -16,7 +15,12 @@ export default function LocaleLayout({ children, params: { locale } }:Readonly<L
 
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>
+        <div className="flex flex-col min-h-screen mac-w-4xl mx-auto">
+          <h1>Header</h1>
+          <div className="flex-grow mt-20">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }

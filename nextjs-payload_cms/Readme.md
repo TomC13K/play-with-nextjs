@@ -38,4 +38,15 @@ show collections
 ```
 
 
+### Installing NextJS
+
+```bash
+npx create-next-app@latest
+# named nextjs-app
+# everything Yes except ...
+# App router NO - using old page router
+# Import alias No
+
+npm install axios     # to communicate with cms
+```
 
